@@ -231,7 +231,7 @@ void Client::put(int key, int value, int id) {
     for (int i = 0; i < write_quorum.size(); i++)
         write_quorum_to_print += (std::to_string(write_quorum.at(i)) + " ");
     EV << "Client[" << this->getIndex() << "]: sent PUT (id "
-              << id << " [ proxy: " << this->proxy
+              << id << ") [ proxy: " << this->proxy
               << "; write quorum: [ " << write_quorum_to_print << "] , < key: "
               << key << ", value: " << value << " > ]" << endl;
 
@@ -250,7 +250,7 @@ void Client::get(int key, int id) {
     for (int i = 0; i < read_quorum.size(); i++)
         read_quorum_to_print += (std::to_string(read_quorum.at(i)) + " ");
     EV << "Client[" << this->getIndex() << "]: sent GET (id "
-              << id << "  [ proxy: " << this->proxy
+              << id << ")  [ proxy: " << this->proxy
               << "; read quorum: [ " << read_quorum_to_print << "] , < key: "
               << key << " > ]" << endl;
 
