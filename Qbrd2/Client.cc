@@ -1,10 +1,3 @@
-/*
- * Client.cc
- *
- *  Created on: Apr 7, 2023
- *      Author: oem
- */
-
 #include <omnetpp.h>
 #include <vector>
 #include <algorithm>
